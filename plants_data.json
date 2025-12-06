@@ -9,7 +9,8 @@
     "air_purifying": "높음",
     "pet_safe": "주의",
     "growth_speed": "느림",
-    "discoloration_tip": "잎이 물렁해지며 검게 변색되면 과습입니다. 뿌리를 말려주세요."
+    "discoloration_tip": "잎이 물렁해지며 검게 변색되면 과습입니다. 뿌리를 말려주세요.",
+    "image_file": "stuki.jpg"
   },
   {
     "id": 2,
@@ -21,7 +22,8 @@
     "air_purifying": "높음",
     "pet_safe": "주의",
     "growth_speed": "느림",
-    "discoloration_tip": "노랗게 변색되면 물을 너무 자주 준 것입니다. 완전히 마른 후 주세요."
+    "discoloration_tip": "노랗게 변색되면 물을 너무 자주 준 것입니다. 완전히 마른 후 주세요.",
+    "image_file": "sansevieria.jpg"
   },
   {
     "id": 3,
@@ -33,7 +35,8 @@
     "air_purifying": "보통",
     "pet_safe": "주의",
     "growth_speed": "느림",
-    "discoloration_tip": "잎이 검은 반점으로 변하면 통풍 불량과 과습이 겹친 것입니다. 환기시키세요."
+    "discoloration_tip": "잎이 검은 반점으로 변하면 통풍 불량과 과습이 겹친 것입니다. 환기시키세요.",
+    "image_file": "geumjeonsu.jpg"
   },
   {
     "id": 4,
@@ -45,7 +48,8 @@
     "air_purifying": "보통",
     "pet_safe": "주의",
     "growth_speed": "보통",
-    "discoloration_tip": "잎 끝이 갈변하면 건조하거나 물 부족 신호입니다. 물을 흠뻑 주세요."
+    "discoloration_tip": "잎 끝이 갈변하면 건조하거나 물 부족 신호입니다. 물을 흠뻑 주세요.",
+    "image_file": "monstera.jpg"
   },
   {
     "id": 5,
@@ -57,7 +61,8 @@
     "air_purifying": "높음",
     "pet_safe": "안전",
     "growth_speed": "보통",
-    "discoloration_tip": "잎 끝이 마르고 갈색으로 변하면 습도가 너무 낮은 것입니다. 분무를 자주 해주세요."
+    "discoloration_tip": "잎 끝이 마르고 갈색으로 변하면 습도가 너무 낮은 것입니다. 분무를 자주 해주세요.",
+    "image_file": "areca_palm.jpg"
   },
   {
     "id": 6,
@@ -69,7 +74,8 @@
     "air_purifying": "보통",
     "pet_safe": "안전",
     "growth_speed": "느림",
-    "discoloration_tip": "잎이 얇고 연해지면 빛이 부족한 신호입니다. 조금 더 밝은 곳으로 옮기세요."
+    "discoloration_tip": "잎이 얇고 연해지면 빛이 부족한 신호입니다. 조금 더 밝은 곳으로 옮기세요.",
+    "image_file": "table_palm.jpg"
   },
   {
     "id": 7,
@@ -81,7 +87,8 @@
     "air_purifying": "높음",
     "pet_safe": "주의",
     "growth_speed": "빠름",
-    "discoloration_tip": "잎이 축 처지고 색이 바래면 물을 너무 오래 안 준 것입니다. 즉시 물을 주세요."
+    "discoloration_tip": "잎이 축 처지고 색이 바래면 물을 너무 오래 안 준 것입니다. 즉시 물을 주세요.",
+    "image_file": "ivy.jpg"
   },
   {
     "id": 8,
@@ -93,7 +100,8 @@
     "air_purifying": "보통",
     "pet_safe": "안전",
     "growth_speed": "느림",
-    "discoloration_tip": "잎이 쭈글쭈글해지면 물 부족입니다. 물을 줘도 회복이 안 되면 뿌리 상태를 확인하세요."
+    "discoloration_tip": "잎이 쭈글쭈글해지면 물 부족입니다. 물을 줘도 회복이 안 되면 뿌리 상태를 확인하세요.",
+    "image_file": "hoya.jpg"
   },
   {
     "id": 9,
@@ -105,7 +113,8 @@
     "air_purifying": "높음",
     "pet_safe": "주의",
     "growth_speed": "빠름",
-    "discoloration_tip": "잎이 노랗게 변하면 과습 신호입니다. 흙이 완전히 마른 후 물을 주세요."
+    "discoloration_tip": "잎이 노랗게 변하면 과습 신호입니다. 흙이 완전히 마른 후 물을 주세요.",
+    "image_file": "scindapsus.jpg"
   },
   {
     "id": 10,
@@ -117,11 +126,12 @@
     "air_purifying": "높음",
     "pet_safe": "주의",
     "growth_speed": "보통",
-    "discoloration_tip": "새 잎이 작고 흐릿하면 빛이 부족하거나 영양 부족일 수 있습니다. 비료를 주거나 밝은 곳으로 옮기세요."
+    "discoloration_tip": "새 잎이 작고 흐릿하면 빛이 부족하거나 영양 부족일 수 있습니다. 비료를 주거나 밝은 곳으로 옮기세요.",
+    "image_file": "rubber_tree.jpg"
   },
   {
     "id": 11,
-    "korean_name": "뱅갈고무나무",
+    "korean_name": "벵갈고무나무",
     "difficulty": "중",
     "light_level": "밝음",
     "size": "대",
@@ -129,7 +139,8 @@
     "air_purifying": "보통",
     "pet_safe": "주의",
     "growth_speed": "보통",
-    "discoloration_tip": "잎의 무늬가 사라지고 녹색만 남으면 빛이 너무 부족한 것입니다."
+    "discoloration_tip": "잎의 무늬가 사라지고 녹색만 남으면 빛이 너무 부족한 것입니다.",
+    "image_file": "bengal_fig.jpg"
   },
   {
     "id": 12,
@@ -141,7 +152,8 @@
     "air_purifying": "낮음",
     "pet_safe": "안전",
     "growth_speed": "느림",
-    "discoloration_tip": "몸체가 물컹해지거나 갈색으로 변하면 썩는 중입니다. 환기를 시키고 물을 끊으세요."
+    "discoloration_tip": "몸체가 물컹해지거나 갈색으로 변하면 썩는 중입니다. 환기를 시키고 물을 끊으세요.",
+    "image_file": "cactus.jpg"
   },
   {
     "id": 13,
@@ -153,7 +165,8 @@
     "air_purifying": "낮음",
     "pet_safe": "안전",
     "growth_speed": "느림",
-    "discoloration_tip": "잎이 쭈글거리면 물 부족입니다. 만약 물을 줬는데도 물렁하면 과습일 수 있습니다."
+    "discoloration_tip": "잎이 쭈글거리면 물 부족입니다. 만약 물을 줬는데도 물렁하면 과습일 수 있습니다.",
+    "image_file": "succulent.jpg"
   },
   {
     "id": 14,
@@ -165,7 +178,8 @@
     "air_purifying": "보통",
     "pet_safe": "주의",
     "growth_speed": "느림",
-    "discoloration_tip": "잎에 검은 점이 생기면 병해 신호일 수 있습니다. 소독제를 사용해 닦아주세요."
+    "discoloration_tip": "잎에 검은 점이 생기면 병해 신호일 수 있습니다. 소독제를 사용해 닦아주세요.",
+    "image_file": "clivia.jpg"
   },
   {
     "id": 15,
@@ -177,7 +191,8 @@
     "air_purifying": "보통",
     "pet_safe": "안전",
     "growth_speed": "보통",
-    "discoloration_tip": "잎 끝이 타는 것처럼 마르면 습도가 너무 낮은 것입니다. 가습기를 틀어주세요."
+    "discoloration_tip": "잎 끝이 타는 것처럼 마르면 습도가 너무 낮은 것입니다. 가습기를 틀어주세요.",
+    "image_file": "calathea.jpg"
   },
   {
     "id": 16,
@@ -189,7 +204,8 @@
     "air_purifying": "보통",
     "pet_safe": "안전",
     "growth_speed": "보통",
-    "discoloration_tip": "잎이 갑자기 노란색으로 변하면 물이 너무 많거나 너무 차가운 물을 사용한 것입니다."
+    "discoloration_tip": "잎이 갑자기 노란색으로 변하면 물이 너무 많거나 너무 차가운 물을 사용한 것입니다.",
+    "image_file": "maranta.jpg"
   },
   {
     "id": 17,
@@ -201,7 +217,8 @@
     "air_purifying": "높음",
     "pet_safe": "안전",
     "growth_speed": "빠름",
-    "discoloration_tip": "잎이 전체적으로 갈색으로 마르면 물 부족 혹은 심각한 통풍 불량입니다. 환기를 시키세요."
+    "discoloration_tip": "잎이 전체적으로 갈색으로 마르면 물 부족 혹은 심각한 통풍 불량입니다. 환기를 시키세요.",
+    "image_file": "yulma.jpg"
   },
   {
     "id": 18,
@@ -213,7 +230,8 @@
     "air_purifying": "낮음",
     "pet_safe": "안전",
     "growth_speed": "빠름",
-    "discoloration_tip": "잎 가장자리가 노랗게 변하면 과습일 수 있으니, 다음 물주기를 늦추세요."
+    "discoloration_tip": "잎 가장자리가 노랗게 변하면 과습일 수 있으니, 다음 물주기를 늦추세요.",
+    "image_file": "geranium.jpg"
   },
   {
     "id": 19,
@@ -225,7 +243,8 @@
     "air_purifying": "낮음",
     "pet_safe": "주의",
     "growth_speed": "보통",
-    "discoloration_tip": "줄기가 약해지고 잎이 처지면 병해 가능성이 있습니다. 영양제를 줍니다."
+    "discoloration_tip": "줄기가 약해지고 잎이 처지면 병해 가능성이 있습니다. 영양제를 줍니다.",
+    "image_file": "lily.jpg"
   },
   {
     "id": 20,
@@ -237,7 +256,8 @@
     "air_purifying": "낮음",
     "pet_safe": "안전",
     "growth_speed": "느림",
-    "discoloration_tip": "뿌리가 검게 변하면 썩은 것입니다. 썩은 뿌리를 제거하고 물을 조절합니다."
+    "discoloration_tip": "뿌리가 검게 변하면 썩은 것입니다. 썩은 뿌리를 제거하고 물을 조절합니다.",
+    "image_file": "phalaenopsis.jpg"
   },
   {
     "id": 21,
@@ -249,7 +269,8 @@
     "air_purifying": "보통",
     "pet_safe": "주의",
     "growth_speed": "느림",
-    "discoloration_tip": "줄기가 물컹해지면 썩는 중입니다. 윗부분을 잘라내고 물을 갈아주세요."
+    "discoloration_tip": "줄기가 물컹해지면 썩는 중입니다. 윗부분을 잘라내고 물을 갈아주세요.",
+    "image_file": "lucky_bamboo.jpg"
   },
   {
     "id": 22,
@@ -261,7 +282,8 @@
     "air_purifying": "보통",
     "pet_safe": "안전",
     "growth_speed": "느림",
-    "discoloration_tip": "잎이 검게 변하면 썩은 것입니다. 물에 담근 후 통풍을 잘 시키세요."
+    "discoloration_tip": "잎이 검게 변하면 썩은 것입니다. 물에 담근 후 통풍을 잘 시키세요.",
+    "image_file": "tillandsia.jpg"
   },
   {
     "id": 23,
@@ -273,7 +295,8 @@
     "air_purifying": "낮음",
     "pet_safe": "안전",
     "growth_speed": "보통",
-    "discoloration_tip": "잎이 노랗게 변하고 떨어지면 물이 부족하거나 통풍이 불량합니다. 햇빛과 환기를 늘려주세요."
+    "discoloration_tip": "잎이 노랗게 변하고 떨어지면 물이 부족하거나 통풍이 불량합니다. 햇빛과 환기를 늘려주세요.",
+    "image_file": "rosemary.jpg"
   },
   {
     "id": 24,
@@ -285,7 +308,8 @@
     "air_purifying": "낮음",
     "pet_safe": "안전",
     "growth_speed": "빠름",
-    "discoloration_tip": "잎이 갈변하면 건조하거나 햇빛이 너무 강한 것입니다. 반그늘로 옮겨주세요."
+    "discoloration_tip": "잎이 갈변하면 건조하거나 햇빛이 너무 강한 것입니다. 반그늘로 옮겨주세요.",
+    "image_file": "lemon_balm.jpg"
   },
   {
     "id": 25,
@@ -297,7 +321,8 @@
     "air_purifying": "보통",
     "pet_safe": "주의",
     "growth_speed": "빠름",
-    "discoloration_tip": "잎에 물방울이 맺히면 물을 너무 많이 준 것입니다. 물 주기를 조절하세요."
+    "discoloration_tip": "잎에 물방울이 맺히면 물을 너무 많이 준 것입니다. 물 주기를 조절하세요.",
+    "image_file": "alocasia.jpg"
   },
   {
     "id": 26,
@@ -309,7 +334,8 @@
     "air_purifying": "보통",
     "pet_safe": "주의",
     "growth_speed": "보통",
-    "discoloration_tip": "색이 바래면 빛 부족입니다. 직사광선을 피한 밝은 창가로 옮기세요."
+    "discoloration_tip": "색이 바래면 빛 부족입니다. 직사광선을 피한 밝은 창가로 옮기세요.",
+    "image_file": "croton.jpg"
   },
   {
     "id": 27,
@@ -321,7 +347,8 @@
     "air_purifying": "높음",
     "pet_safe": "주의",
     "growth_speed": "보통",
-    "discoloration_tip": "잎이 작고 연해지면 빛이 부족하다는 뜻입니다. 밝은 간접광을 주세요."
+    "discoloration_tip": "잎이 작고 연해지면 빛이 부족하다는 뜻입니다. 밝은 간접광을 주세요.",
+    "image_file": "syngonium.jpg"
   },
   {
     "id": 28,
@@ -333,7 +360,8 @@
     "air_purifying": "보통",
     "pet_safe": "안전",
     "growth_speed": "느림",
-    "discoloration_tip": "가지가 아래로 처지면 물이 부족한 것입니다. 물을 충분히 주세요."
+    "discoloration_tip": "가지가 아래로 처지면 물이 부족한 것입니다. 물을 충분히 주세요.",
+    "image_file": "araucaria.jpg"
   },
   {
     "id": 29,
@@ -345,7 +373,8 @@
     "air_purifying": "낮음",
     "pet_safe": "안전",
     "growth_speed": "빠름",
-    "discoloration_tip": "잎이 노랗게 변하면서 떨어지면 통풍이 불량하거나 빛이 부족한 것입니다."
+    "discoloration_tip": "잎이 떨어진다면 급격한 온도 변화가 원인일 수 있습니다.",
+    "image_file": "mandevilla.jpg"
   },
   {
     "id": 30,
@@ -357,19 +386,21 @@
     "air_purifying": "높음",
     "pet_safe": "주의",
     "growth_speed": "보통",
-    "discoloration_tip": "잎 끝이 갈색으로 변하면 물에 염소 성분이 많거나 습도가 낮은 것입니다. 정수된 물을 사용하세요."
+    "discoloration_tip": "잎 끝이 갈색으로 변하면 물에 염소 성분이 많거나 습도가 낮은 것입니다. 정수된 물을 사용하세요.",
+    "image_file": "spathiphyllum.jpg"
   },
   {
     "id": 31,
-    "korean_name": "호접란",
+    "korean_name": "덴드롱",
     "difficulty": "상",
     "light_level": "중간",
     "size": "소",
-    "management_tip": "고급 난 종류로, 온도와 습도 관리에 신경 써야 합니다.",
-    "air_purifying": "낮음",
+    "management_tip": "흰 꽃이 아름다운 덩굴 식물로, 통풍이 잘 되어야 합니다.",
+    "air_purifying": "보통",
     "pet_safe": "안전",
-    "growth_speed": "느림",
-    "discoloration_tip": "잎이 흐물흐물해지면 과습으로 뿌리가 썩은 것입니다. 즉시 분갈이하세요."
+    "growth_speed": "빠름",
+    "discoloration_tip": "잎이 흐물흐물해지면 과습으로 뿌리가 썩은 것입니다. 즉시 분갈이하세요.",
+    "image_file": "clerodendrum.jpg"
   },
   {
     "id": 32,
@@ -381,7 +412,8 @@
     "air_purifying": "높음",
     "pet_safe": "주의",
     "growth_speed": "보통",
-    "discoloration_tip": "잎이 쭈글거리고 꽃이 시들면 물 부족이나 영양 부족입니다. 물과 영양제를 함께 주세요."
+    "discoloration_tip": "잎이 쭈글거리고 꽃이 시들면 물 부족이나 영양 부족입니다. 물과 영양제를 함께 주세요.",
+    "image_file": "anthurium.jpg"
   },
   {
     "id": 33,
@@ -393,7 +425,8 @@
     "air_purifying": "보통",
     "pet_safe": "안전",
     "growth_speed": "보통",
-    "discoloration_tip": "잎 끝이 갈색으로 타면 물 부족 또는 습도 부족입니다. 물을 보충하세요."
+    "discoloration_tip": "잎 끝이 갈색으로 타면 물 부족 또는 습도 부족입니다. 물을 보충하세요.",
+    "image_file": "chamaedorea.jpg"
   },
   {
     "id": 34,
@@ -405,7 +438,8 @@
     "air_purifying": "낮음",
     "pet_safe": "안전",
     "growth_speed": "느림",
-    "discoloration_tip": "줄기가 쪼글거리면 물 부족입니다. 너무 딱딱하고 색이 변하면 과습일 수 있습니다."
+    "discoloration_tip": "줄기가 쪼글거리면 물 부족입니다. 너무 딱딱하고 색이 변하면 과습일 수 있습니다.",
+    "image_file": "rhipsalis.jpg"
   },
   {
     "id": 35,
@@ -417,7 +451,8 @@
     "air_purifying": "낮음",
     "pet_safe": "안전",
     "growth_speed": "빠름",
-    "discoloration_tip": "잎이 안쪽으로 말리면 물 부족, 검은 반점은 과습 신호입니다."
+    "discoloration_tip": "잎이 안쪽으로 말리면 물 부족, 검은 반점은 과습 신호입니다.",
+    "image_file": "pilea.jpg"
   },
   {
     "id": 36,
@@ -429,7 +464,8 @@
     "air_purifying": "보통",
     "pet_safe": "안전",
     "growth_speed": "보통",
-    "discoloration_tip": "잎이 창백해지면 빛이 너무 강한 것입니다. 반그늘로 옮겨주세요."
+    "discoloration_tip": "잎이 창백해지면 빛이 너무 강한 것입니다. 반그늘로 옮겨주세요.",
+    "image_file": "fittonia.jpg"
   },
   {
     "id": 37,
@@ -441,7 +477,8 @@
     "air_purifying": "높음",
     "pet_safe": "안전",
     "growth_speed": "빠름",
-    "discoloration_tip": "잎이 전체적으로 건조해지면 습도 부족과 물 부족입니다. 분무와 물주기를 늘리세요."
+    "discoloration_tip": "잎이 전체적으로 건조해지면 습도 부족과 물 부족입니다. 분무와 물주기를 늘리세요.",
+    "image_file": "boston_fern.jpg"
   },
   {
     "id": 38,
@@ -453,7 +490,8 @@
     "air_purifying": "보통",
     "pet_safe": "주의",
     "growth_speed": "느림",
-    "discoloration_tip": "잎이 갑자기 떨어지면 급격한 온도 변화가 원인일 수 있습니다. 따뜻한 곳으로 옮기세요."
+    "discoloration_tip": "잎이 갑자기 떨어지면 급격한 온도 변화가 원인일 수 있습니다. 따뜻한 곳으로 옮기세요.",
+    "image_file": "marginata.jpg"
   },
   {
     "id": 39,
@@ -465,7 +503,8 @@
     "air_purifying": "낮음",
     "pet_safe": "안전",
     "growth_speed": "느림",
-    "discoloration_tip": "잎이 검게 변하면 통풍이 잘 안 되어 썩는 것입니다. 환기 공간에 걸어두세요."
+    "discoloration_tip": "잎이 검게 변하면 통풍이 잘 안 되어 썩는 것입니다. 환기 공간에 걸어두세요.",
+    "image_file": "spanish_moss.jpg"
   },
   {
     "id": 40,
@@ -477,6 +516,267 @@
     "air_purifying": "보통",
     "pet_safe": "주의",
     "growth_speed": "보통",
-    "discoloration_tip": "잎이 끈적해지면 진딧물 등 해충의 공격일 수 있습니다. 살충제로 닦아주세요."
+    "discoloration_tip": "잎이 끈적해지면 진딧물 등 해충의 공격일 수 있습니다. 살충제로 닦아주세요.",
+    "image_file": "clusia.jpg"
+  },
+  {
+    "id": 41,
+    "korean_name": "바이올렛",
+    "difficulty": "상",
+    "light_level": "밝음",
+    "size": "소",
+    "management_tip": "밝은 빛과 높은 습도를 좋아하며, 물이 잎에 닿지 않게 주의하세요.",
+    "air_purifying": "낮음",
+    "pet_safe": "안전",
+    "growth_speed": "보통",
+    "discoloration_tip": "잎이 갈색으로 변하면 빛이 너무 강하거나 물을 차갑게 준 것입니다.",
+    "image_file": "violet.jpg"
+  },
+  {
+    "id": 42,
+    "korean_name": "크라슐라 (염좌)",
+    "difficulty": "하",
+    "light_level": "밝음",
+    "size": "중",
+    "management_tip": "물관리가 매우 쉽고, 건조하게 키워야 합니다. '돈나무'로 불리기도 합니다.",
+    "air_purifying": "낮음",
+    "pet_safe": "주의",
+    "growth_speed": "느림",
+    "discoloration_tip": "잎이 흐물흐물해지면 과습입니다. 즉시 물주기를 중단하세요.",
+    "image_file": "crassula.jpg"
+  },
+  {
+    "id": 43,
+    "korean_name": "필로덴드론",
+    "difficulty": "중",
+    "light_level": "중간",
+    "size": "대",
+    "management_tip": "덩굴성 식물로 지지대가 필요하며, 물은 겉흙이 마르면 줍니다.",
+    "air_purifying": "높음",
+    "pet_safe": "주의",
+    "growth_speed": "빠름",
+    "discoloration_tip": "잎이 노랗게 변하면 과습, 작고 잎이 얇아지면 빛 부족입니다.",
+    "image_file": "philodendron.jpg"
+  },
+  {
+    "id": 44,
+    "korean_name": "칼라디움",
+    "difficulty": "상",
+    "light_level": "중간",
+    "size": "중",
+    "management_tip": "화려한 잎이 특징이며, 겨울에는 휴면합니다. 습도 관리가 중요합니다.",
+    "air_purifying": "낮음",
+    "pet_safe": "주의",
+    "growth_speed": "보통",
+    "discoloration_tip": "잎 가장자리가 갈색으로 타면 습도가 낮다는 신호입니다.",
+    "image_file": "caladium.jpg"
+  },
+  {
+    "id": 45,
+    "korean_name": "알로에",
+    "difficulty": "하",
+    "light_level": "밝음",
+    "size": "중",
+    "management_tip": "약용으로도 사용되며, 건조하게 관리하고 햇빛을 많이 보여주세요.",
+    "air_purifying": "낮음",
+    "pet_safe": "주의",
+    "growth_speed": "느림",
+    "discoloration_tip": "잎이 빨갛게 변하면 햇빛을 너무 많이 받았거나 스트레스 신호입니다.",
+    "image_file": "aloe.jpg"
+  },
+  {
+    "id": 46,
+    "korean_name": "관음죽",
+    "difficulty": "중",
+    "light_level": "낮음",
+    "size": "대",
+    "management_tip": "병해충에 강하고, 음지에서도 잘 자라지만 가끔 통풍을 시켜주세요.",
+    "air_purifying": "높음",
+    "pet_safe": "안전",
+    "growth_speed": "느림",
+    "discoloration_tip": "잎 끝이 마르면 물 부족이나 건조함입니다. 잎에 자주 분무해 주세요.",
+    "image_file": "rhapis.jpg"
+  },
+  {
+    "id": 47,
+    "korean_name": "홍콩 야자",
+    "difficulty": "중",
+    "light_level": "중간",
+    "size": "대",
+    "management_tip": "생명력이 강하고 키우기 쉬우며, 흙이 마르면 충분히 물을 줍니다.",
+    "air_purifying": "보통",
+    "pet_safe": "주의",
+    "growth_speed": "보통",
+    "discoloration_tip": "잎이 노랗게 되면 과습이거나 비료가 부족한 것입니다.",
+    "image_file": "schefflera.jpg"
+  },
+  {
+    "id": 48,
+    "korean_name": "오렌지 자스민",
+    "difficulty": "상",
+    "light_level": "밝음",
+    "size": "소",
+    "management_tip": "향이 매우 좋고, 따뜻한 환경과 충분한 빛이 필요합니다.",
+    "air_purifying": "낮음",
+    "pet_safe": "안전",
+    "growth_speed": "보통",
+    "discoloration_tip": "잎이 떨어진다면 급격한 온도 변화가 원인일 수 있습니다.",
+    "image_file": "orange_jasmine.jpg"
+  },
+  {
+    "id": 49,
+    "korean_name": "아디안텀 (봉의꼬리)",
+    "difficulty": "상",
+    "light_level": "낮음",
+    "size": "소",
+    "management_tip": "습도에 극도로 민감합니다. 잎이 마르지 않도록 항상 관리해야 합니다.",
+    "air_purifying": "보통",
+    "pet_safe": "안전",
+    "growth_speed": "빠름",
+    "discoloration_tip": "잎이 바삭하게 마르면 공기가 너무 건조한 것입니다. 잎 전체를 물에 담가주세요.",
+    "image_file": "adiantum.jpg"
+  },
+  {
+    "id": 50,
+    "korean_name": "쉐플레라",
+    "difficulty": "하",
+    "light_level": "중간",
+    "size": "대",
+    "management_tip": "매우 튼튼하고 생명력이 강해 초보자에게 적합합니다. 물은 겉흙이 마르면 줍니다.",
+    "air_purifying": "높음",
+    "pet_safe": "주의",
+    "growth_speed": "보통",
+    "discoloration_tip": "잎이 검게 변하면 추위에 노출되었거나 과습입니다. 따뜻한 곳으로 옮기세요.",
+    "image_file": "umbrella_tree.jpg"
+  },
+  {
+    "id": 51,
+    "korean_name": "아이비 (골든)",
+    "difficulty": "하",
+    "light_level": "중간",
+    "size": "소",
+    "management_tip": "일반 아이비보다 관리가 쉽고, 행잉 플랜트로 적합합니다.",
+    "air_purifying": "높음",
+    "pet_safe": "주의",
+    "growth_speed": "빠름",
+    "discoloration_tip": "잎 색이 연해지면 빛이 부족한 신호입니다. 더 밝은 곳으로 옮기세요.",
+    "image_file": "golden_ivy.jpg"
+  },
+  {
+    "id": 52,
+    "korean_name": "틸란드시아 이오난사",
+    "difficulty": "하",
+    "light_level": "밝음",
+    "size": "소",
+    "management_tip": "흙 없이 공중에서 기르며, 건조하게 관리하고 주기적인 물 분무가 필요합니다.",
+    "air_purifying": "낮음",
+    "pet_safe": "안전",
+    "growth_speed": "느림",
+    "discoloration_tip": "잎이 말리고 색이 흐릿하면 물 부족입니다. 물에 30분 정도 담가주세요.",
+    "image_file": "ionantha.jpg"
+  },
+  {
+    "id": 53,
+    "korean_name": "멜라닌 고무나무",
+    "difficulty": "중",
+    "light_level": "밝음",
+    "size": "대",
+    "management_tip": "잎에 광택이 있으며, 밝은 곳에 두어야 잘 자랍니다. 통풍에 신경 써야 합니다.",
+    "air_purifying": "보통",
+    "pet_safe": "주의",
+    "growth_speed": "보통",
+    "discoloration_tip": "잎이 처지면 물이 부족하다는 신호입니다. 물을 흠뻑 주세요.",
+    "image_file": "melanie_fig.jpg"
+  },
+  {
+    "id": 54,
+    "korean_name": "수국",
+    "difficulty": "상",
+    "light_level": "밝음",
+    "size": "중",
+    "management_tip": "화려한 꽃이 피는 식물로, 물을 매우 좋아합니다. 여름철에는 매일 줘야 합니다.",
+    "air_purifying": "낮음",
+    "pet_safe": "주의",
+    "growth_speed": "빠름",
+    "discoloration_tip": "잎과 꽃이 갑자기 시들면 물 부족입니다. 즉시 물을 줍니다.",
+    "image_file": "hydrangea.jpg"
+  },
+  {
+    "id": 55,
+    "korean_name": "레인보우 페페로미아",
+    "difficulty": "중",
+    "light_level": "중간",
+    "size": "소",
+    "management_tip": "색이 아름다운 다육질 잎을 가졌으며, 과습에 취약합니다.",
+    "air_purifying": "보통",
+    "pet_safe": "안전",
+    "growth_speed": "느림",
+    "discoloration_tip": "잎이 물컹해지면 뿌리 썩음입니다. 흙을 완전히 말려주세요.",
+    "image_file": "rainbow_peperomia.jpg"
+  },
+  {
+    "id": 56,
+    "korean_name": "피닉스 야자",
+    "difficulty": "중",
+    "light_level": "밝음",
+    "size": "대",
+    "management_tip": "실내에서 이국적인 분위기를 연출하며, 통풍이 잘 되어야 합니다.",
+    "air_purifying": "높음",
+    "pet_safe": "안전",
+    "growth_speed": "보통",
+    "discoloration_tip": "잎 끝이 노랗게 마르면 비료가 부족하거나 물이 부족한 것입니다.",
+    "image_file": "phoenix_palm.jpg"
+  },
+  {
+    "id": 57,
+    "korean_name": "크리소카디움",
+    "difficulty": "상",
+    "light_level": "낮음",
+    "size": "소",
+    "management_tip": "습한 환경을 좋아합니다. 밝은 빛보다는 반그늘에서 잘 자랍니다.",
+    "air_purifying": "보통",
+    "pet_safe": "안전",
+    "growth_speed": "보통",
+    "discoloration_tip": "잎이 물에 젖은 것처럼 투명해지면 과습입니다. 물을 줄이세요.",
+    "image_file": "chrysocardium.jpg"
+  },
+  {
+    "id": 58,
+    "korean_name": "천냥금",
+    "difficulty": "하",
+    "light_level": "중간",
+    "size": "소",
+    "management_tip": "붉은 열매가 겨울 내내 달려 관상 가치가 높고, 실내에서도 잘 자랍니다.",
+    "air_purifying": "낮음",
+    "pet_safe": "주의",
+    "growth_speed": "느림",
+    "discoloration_tip": "잎이 노랗게 변하고 떨어지면 물이 부족하거나 너무 추운 곳에 둔 것입니다.",
+    "image_file": "ardisia.jpg"
+  },
+  {
+    "id": 59,
+    "korean_name": "황금사",
+    "difficulty": "하",
+    "light_level": "밝음",
+    "size": "중",
+    "management_tip": "둥근 모양의 선인장으로, 물은 매우 드물게 주고 햇빛을 충분히 보여줍니다.",
+    "air_purifying": "낮음",
+    "pet_safe": "안전",
+    "growth_speed": "느림",
+    "discoloration_tip": "몸체가 딱딱하고 갈색으로 변하면 햇빛 부족이나 흙 문제일 수 있습니다.",
+    "image_file": "golden_barrel_cactus.jpg"
+  },
+  {
+    "id": 60,
+    "korean_name": "레드스타",
+    "difficulty": "상",
+    "light_level": "중간",
+    "size": "소",
+    "management_tip": "잎 중앙의 붉은색이 특징이며, 높은 습도를 유지해야 합니다.",
+    "air_purifying": "보통",
+    "pet_safe": "안전",
+    "growth_speed": "보통",
+    "discoloration_tip": "붉은색이 희미해지면 빛이 부족하다는 신호입니다. 더 밝은 곳으로 옮기세요.",
+    "image_file": "red_star.jpg"
   }
 ]
