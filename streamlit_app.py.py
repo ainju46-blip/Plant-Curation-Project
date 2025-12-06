@@ -1,10 +1,22 @@
 import streamlit as st
 import json
-import os # <-- os 모듈 추가
+import os 
 
 # ====================================================
-# 1. 매핑 딕셔너리 정의 (문장 <-> 코드 변환용)
-# ... (이 부분은 이전과 동일)
+# 0. 페이지 기본 설정 및 이미지 폴더 경로
+# ====================================================
+st.set_page_config(
+    page_title="성향 맞춤 실내 식물 큐레이터",      
+    page_icon="🌿",                         
+    layout="wide",                          
+    initial_sidebar_state="expanded"       
+)
+
+# 이미지 파일이 저장된 폴더 경로 (GitHub에 업로드한 폴더 이름과 일치해야 함)
+IMAGE_DIR = 'images' 
+
+# ====================================================
+# 1. 매핑 딕셔너리 정의 및 JSON 키 설정
 # ====================================================
 
 DIFFICULTY_MAP = {
@@ -47,105 +59,144 @@ JSON_KEYS = ['difficulty', 'light_level', 'size', 'air_purifying', 'pet_safe', '
 NUM_CONDITIONS = len(JSON_KEYS)
 
 # ====================================================
-# 2. 데이터 로드 (경로 수정 포함)
+# 2. 데이터 로드 (경로 단순화)
 # ====================================================
 
 @st.cache_data
 def load_data(file_name):
-    """JSON 파일을 로드하고 파일 경로 문제를 해결합니다."""
+    """JSON 파일을 현재 작업 디렉토리에서 바로 로드하도록 단순화합니다."""
     try:
-        # os.path.dirname(__file__)는 현재 스크립트 파일의 디렉토리를 반환합니다.
-        # os.path.join은 해당 디렉토리와 파일 이름을 합쳐 정확한 경로를 만듭니다.
-        base_dir = os.path.dirname(__file__)
-        file_path = os.path.join(base_dir, file_name) 
+        # 파일 경로 오류를 줄이기 위해 단순한 상대 경로를 사용합니다.
+        file_path = file_name 
         
         with open(file_path, 'r', encoding='utf-8') as f:
             data = json.load(f)
         return data
     except FileNotFoundError:
-        st.error("오류: 데이터 파일을 찾을 수 없습니다. 경로: {0}".format(file_path))
+        st.error("오류: plants_data.json 파일을 찾을 수 없습니다. JSON 파일 이름(plants_data.json)이 맞는지 확인해주세요.")
         return []
 
-PLANT_DATA = load_data('plants_data.json') # 파일 이름은 소문자로 유지
+PLANT_DATA = load_data('plants_data.json') 
 
-# ... (나머지 UI 및 로직 코드는 이전과 동일)
-
-# --------------------------------------------------------------------------------------
-# (3. UI 설정, 4. 필터링 로직 및 결과 출력 코드는 이전 최종 버전과 동일합니다.)
-# --------------------------------------------------------------------------------------
+# ====================================================
+# 3. 웹 페이지 UI: 6가지 문장식 선택지
+# ====================================================
 
 st.title("🌿 성향 맞춤 실내 식물 큐레이션")
 st.markdown("당신의 관리 성향, 환경, 목적에 가장 적합한 식물을 찾아드립니다.")
 st.markdown("---")
 
 default_options = ['-- 선택 --']
-all_inputs = []
+all_inputs_text = [] 
 
 # 컬럼 3개로 나누어 질문 배치
 col1, col2, col3 = st.columns(3)
 
 with col1:
-    st.subheader("✅ 관리 성향/환경")
-    all_inputs.append(st.selectbox("Q1. 관리 난이도", default_options + list(DIFFICULTY_MAP.keys())))
-    all_inputs.append(st.selectbox("Q2. 햇빛 량", default_options + list(LIGHT_MAP.keys())))
+    st.markdown("## ✅ **관리 성향**<br>**환경**") # 두 줄로 정리된 제목
+    
+    # Q1: 버튼식 UI (st.radio) 적용
+    st.markdown("Q1. 관리 난이도") 
+    q1_selection = st.radio(
+        " ", options=list(DIFFICULTY_MAP.keys()), index=None, key='q1_radio'
+    )
+    all_inputs_text.append(q1_selection if q1_selection else '-- 선택 --')
+    
+    # Q2: 일반 Selectbox 유지
+    st.markdown("Q2. 햇빛 량") 
+    q2_selection = st.selectbox(" ", default_options + list(LIGHT_MAP.keys()), key='q2_select')
+    all_inputs_text.append(q2_selection)
+
 
 with col2:
-    st.subheader("💡 추가 조건")
-    all_inputs.append(st.selectbox("Q3. 식물 크기", default_options + list(SIZE_MAP.keys())))
-    all_inputs.append(st.selectbox("Q4. 공기정화 능력", default_options + list(AIR_MAP.keys())))
+    st.markdown("## 💡 **추가 조건**")
+    q3_selection = st.selectbox("Q3. 식물 크기", default_options + list(SIZE_MAP.keys()), key='q3_select')
+    all_inputs_text.append(q3_selection)
+    
+    q4_selection = st.selectbox("Q4. 공기정화 능력", default_options + list(AIR_MAP.keys()), key='q4_select')
+    all_inputs_text.append(q4_selection)
+
 
 with col3:
-    st.subheader("⚠️ 생활 환경")
-    all_inputs.append(st.selectbox("Q5. 반려동물/아이 안전", default_options + list(PET_MAP.keys()))) 
-    all_inputs.append(st.selectbox("Q6. 생장 속도", default_options + list(GROWTH_MAP.keys())))   
-
+    st.markdown("## ⚠️ **생활 환경**")
+    q5_selection = st.selectbox("Q5. 반려동물/아이 안전", default_options + list(PET_MAP.keys()), key='q5_select')
+    all_inputs_text.append(q5_selection)
+    
+    q6_selection = st.selectbox("Q6. 생장 속도", default_options + list(GROWTH_MAP.keys()), key='q6_select')
+    all_inputs_text.append(q6_selection)
+    
 st.markdown("---")
 
-# 4. 필터링 로직 및 결과 출력
-all_selected = all(val != '-- 선택 --' for val in all_inputs)
+# ====================================================
+# 4. 점수 기반 순위 매기기 로직 및 결과 출력
+# ====================================================
+
+# 모든 질문이 선택되었는지 확인
+all_selected = all(val != '-- 선택 --' for val in all_inputs_text)
 
 if PLANT_DATA and all_selected:
     
     # 4-1. 긴 문장 선택지를 짧은 코드로 변환 (매핑)
     filtered_values = []
-    for i, selected_text in enumerate(all_inputs):
+    for i, selected_text in enumerate(all_inputs_text):
         filtered_values.append(ALL_MAPS[i].get(selected_text))
 
-    recommended_plants = []
+    # ⭐ 핵심 로직: 부분 일치 점수를 저장할 리스트를 만듭니다.
+    scored_plants = [] 
 
-    # 4-2. 6가지 조건 필터링 실행
+    # 4-2. 6가지 조건 순위 매기기 실행
     for plant in PLANT_DATA:
         match_count = 0
         
         for i, key in enumerate(JSON_KEYS):
             if plant.get(key) == filtered_values[i]:
-                match_count += 1
+                match_count += 1 
         
-        if match_count == NUM_CONDITIONS:
-            recommended_plants.append(plant)
+        if match_count > 0:
+            scored_plants.append((match_count, plant))
 
-    # 추천 식물을 최대 3개로 제한합니다.
-    final_recommendations = recommended_plants[:3] 
+    # 4-3. 순위 확정 및 결과 제한
+    scored_plants.sort(key=lambda x: x[0], reverse=True) 
+    final_recommendations = scored_plants[:3] # 최대 3개 제한
     
-    # 4-3. 결과 출력
-    st.header("✅ 추천 결과")
+    # 4-4. 결과 출력
+    st.header("✅ 추천 결과 (점수 순)")
+    st.markdown("선택하신 **6가지 조건 중 가장 많이 일치**하는 식물을 순위별로 보여드립니다.")
     
     if len(final_recommendations) > 0:
-        st.success("🎊 조건에 맞는 식물 중 상위 {0}개를 추천합니다! (최대 3개)".format(len(final_recommendations)))
+        st.success("🎊 조건 일치 점수가 가장 높은 상위 {0}개 식물을 추천합니다!".format(len(final_recommendations)))
         
-        for i, plant in enumerate(final_recommendations):
-            st.subheader("{0}. {1}".format(i + 1, plant['korean_name']))
-            st.info("🌿 난이도: {0} | ☀️ 빛: {1} | 📏 크기: {2}".format(
-                plant['difficulty'], plant['light_level'], plant['size']))
-            st.info("💨 공기정화: {0} | 🐶 안전성: {1} | 📈 생장 속도: {2}".format(
-                plant['air_purifying'], plant['pet_safe'], plant['growth_speed']))
+        for i, (score, plant) in enumerate(final_recommendations):
+            # 5-1. 컬럼을 2개로 나누어 이미지와 텍스트를 배치
+            col_img, col_text = st.columns([1, 3])
             
+            with col_img:
+                # ⭐⭐ 이미지 출력 추가 ⭐⭐
+                image_file_name = plant.get('image_file') 
+                if image_file_name:
+                    image_path = "{0}/{1}".format(IMAGE_DIR, image_file_name)
+                    try:
+                        st.image(image_path, caption=plant['korean_name'])
+                    except FileNotFoundError:
+                        st.warning("이미지 파일 {0} 없음".format(image_file_name))
+                else:
+                    st.warning("이미지 경로 누락")
+            
+            with col_text:
+                # .format() 사용 (점수 출력)
+                st.subheader("{0}. {1} (✅ {2}/6 조건 일치)".format(i + 1, plant['korean_name'], score))
+                st.info("🌿 난이도: {0} | ☀️ 빛: {1} | 📏 크기: {2}".format(
+                    plant['difficulty'], plant['light_level'], plant['size']))
+                st.info("💨 공기정화: {0} | 🐶 안전성: {1} | 📈 생장 속도: {2}".format(
+                    plant['air_purifying'], plant['pet_safe'], plant['growth_speed']))
+            
+            # 5-2. 팁은 전체 너비로 출력
             st.warning("💡 일반 관리 팁: {0}".format(plant.get('management_tip', '팁 정보 없음')))
             st.error("⚠️ 잎 변색 시 대처법: {0}".format(plant.get('discoloration_tip', '대처 팁 정보 없음'))) 
             st.markdown("---")
             
     else:
-        st.error("😭 {0}가지 조건에 모두 맞는 식물은 찾지 못했어요. 조건을 완화해보세요!".format(NUM_CONDITIONS))
+        st.error("😭 선택하신 어떤 조건에도 일치하는 식물을 찾지 못했습니다. (0/6 조건 일치)")
         
 elif not all_selected:
     st.info("모든 질문에 답변을 선택해주세요.")
