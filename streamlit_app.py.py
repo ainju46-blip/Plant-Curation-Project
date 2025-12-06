@@ -2,7 +2,7 @@ import streamlit as st
 import json
 import os 
 
-# ====================================================
+
 # 0. 페이지 기본 설정 및 이미지 폴더 경로
 # ====================================================
 st.set_page_config(
@@ -15,7 +15,6 @@ st.set_page_config(
 # 이미지 파일이 저장된 폴더 경로
 IMAGE_DIR = 'images' 
 
-# ====================================================
 # 1. 매핑 딕셔너리 정의 및 JSON 키 설정 (이전과 동일)
 # ====================================================
 
@@ -58,7 +57,7 @@ ALL_MAPS = [DIFFICULTY_MAP, LIGHT_MAP, SIZE_MAP, AIR_MAP, PET_MAP, GROWTH_MAP]
 JSON_KEYS = ['difficulty', 'light_level', 'size', 'air_purifying', 'pet_safe', 'growth_speed'] 
 NUM_CONDITIONS = len(JSON_KEYS)
 
-# ====================================================
+
 # 2. 데이터 로드 및 UI 설정
 # ====================================================
 
@@ -86,9 +85,7 @@ all_inputs_text = []
 col1, col2, col3 = st.columns(3)
 
 with col1:
-    # ⭐⭐ [수정] 두 개의 markdown으로 나누어 줄바꿈 및 정렬 문제 해결 ⭐⭐
-    st.markdown("## ✅ **관리 성향**")
-    st.markdown("## **환경**") 
+    st.markdown("### ✅ 관리 성향 / 환경")
     
     # Q1: st.radio 적용 (크게, 버튼식)
     st.markdown("Q1. 관리 난이도") 
@@ -211,4 +208,5 @@ if PLANT_DATA and all_selected:
         
 elif not all_selected:
     st.info("모든 질문에 답변을 선택해주세요.")
+
 
