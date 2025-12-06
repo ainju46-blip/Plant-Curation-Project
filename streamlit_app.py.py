@@ -85,7 +85,7 @@ all_inputs_text = []
 col1, col2, col3 = st.columns(3)
 
 with col1:
-    st.markdown("### ✅ 관리 성향 / 환경")
+    st.markdown("## ✅ 관리 성향 / 환경")
     
     # Q1: st.radio 적용 (크게, 버튼식)
     st.markdown("Q1. 관리 난이도") 
@@ -101,7 +101,7 @@ with col1:
 
 
 with col2:
-    st.markdown("## 💡 **추가 조건**")
+    st.markdown("##💡 **추가 조건**")
     st.markdown(" ") # 정렬을 위한 빈 줄 삽입
     
     # ⭐ Q3도 st.radio로 통일
@@ -208,5 +208,6 @@ if PLANT_DATA and all_selected:
         
 elif not all_selected:
     st.info("모든 질문에 답변을 선택해주세요.")
+
 
 
