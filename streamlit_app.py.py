@@ -12,11 +12,11 @@ st.set_page_config(
     initial_sidebar_state="expanded"       
 )
 
-# 이미지 파일이 저장된 폴더 경로 (GitHub에 업로드한 폴더 이름과 일치해야 함)
+# 이미지 파일이 저장된 폴더 경로
 IMAGE_DIR = 'images' 
 
 # ====================================================
-# 1. 매핑 딕셔너리 정의 및 JSON 키 설정
+# 1. 매핑 딕셔너리 정의 및 JSON 키 설정 (이전과 동일)
 # ====================================================
 
 DIFFICULTY_MAP = {
@@ -59,16 +59,14 @@ JSON_KEYS = ['difficulty', 'light_level', 'size', 'air_purifying', 'pet_safe', '
 NUM_CONDITIONS = len(JSON_KEYS)
 
 # ====================================================
-# 2. 데이터 로드 (경로 단순화)
+# 2. 데이터 로드 및 UI 설정
 # ====================================================
 
 @st.cache_data
 def load_data(file_name):
     """JSON 파일을 현재 작업 디렉토리에서 바로 로드하도록 단순화합니다."""
     try:
-        # 파일 경로 오류를 줄이기 위해 단순한 상대 경로를 사용합니다.
         file_path = file_name 
-        
         with open(file_path, 'r', encoding='utf-8') as f:
             data = json.load(f)
         return data
@@ -78,52 +76,61 @@ def load_data(file_name):
 
 PLANT_DATA = load_data('plants_data.json') 
 
-# ====================================================
-# 3. 웹 페이지 UI: 6가지 문장식 선택지
-# ====================================================
-
 st.title("🌿 성향 맞춤 실내 식물 큐레이션")
 st.markdown("당신의 관리 성향, 환경, 목적에 가장 적합한 식물을 찾아드립니다.")
 st.markdown("---")
 
-default_options = ['-- 선택 --']
 all_inputs_text = [] 
 
 # 컬럼 3개로 나누어 질문 배치
 col1, col2, col3 = st.columns(3)
 
 with col1:
-    st.markdown("## ✅ **관리 성향**<br>**환경**") # 두 줄로 정리된 제목
+    # ⭐⭐ [수정] 두 개의 markdown으로 나누어 줄바꿈 및 정렬 문제 해결 ⭐⭐
+    st.markdown("## ✅ **관리 성향**")
+    st.markdown("## **환경**") 
     
-    # Q1: 버튼식 UI (st.radio) 적용
+    # Q1: st.radio 적용 (크게, 버튼식)
     st.markdown("Q1. 관리 난이도") 
     q1_selection = st.radio(
         " ", options=list(DIFFICULTY_MAP.keys()), index=None, key='q1_radio'
     )
     all_inputs_text.append(q1_selection if q1_selection else '-- 선택 --')
     
-    # Q2: 일반 Selectbox 유지
+    # ⭐ Q2도 st.radio로 통일
     st.markdown("Q2. 햇빛 량") 
-    q2_selection = st.selectbox(" ", default_options + list(LIGHT_MAP.keys()), key='q2_select')
-    all_inputs_text.append(q2_selection)
+    q2_selection = st.radio(" ", options=list(LIGHT_MAP.keys()), index=None, key='q2_radio')
+    all_inputs_text.append(q2_selection if q2_selection else '-- 선택 --')
 
 
 with col2:
     st.markdown("## 💡 **추가 조건**")
-    q3_selection = st.selectbox("Q3. 식물 크기", default_options + list(SIZE_MAP.keys()), key='q3_select')
-    all_inputs_text.append(q3_selection)
+    st.markdown(" ") # 정렬을 위한 빈 줄 삽입
     
-    q4_selection = st.selectbox("Q4. 공기정화 능력", default_options + list(AIR_MAP.keys()), key='q4_select')
-    all_inputs_text.append(q4_selection)
+    # ⭐ Q3도 st.radio로 통일
+    st.markdown("Q3. 식물 크기")
+    q3_selection = st.radio(" ", options=list(SIZE_MAP.keys()), index=None, key='q3_radio')
+    all_inputs_text.append(q3_selection if q3_selection else '-- 선택 --')
+    
+    # ⭐ Q4도 st.radio로 통일
+    st.markdown("Q4. 공기정화 능력")
+    q4_selection = st.radio(" ", options=list(AIR_MAP.keys()), index=None, key='q4_radio')
+    all_inputs_text.append(q4_selection if q4_selection else '-- 선택 --')
 
 
 with col3:
     st.markdown("## ⚠️ **생활 환경**")
-    q5_selection = st.selectbox("Q5. 반려동물/아이 안전", default_options + list(PET_MAP.keys()), key='q5_select')
-    all_inputs_text.append(q5_selection)
+    st.markdown(" ") # 정렬을 위한 빈 줄 삽입
     
-    q6_selection = st.selectbox("Q6. 생장 속도", default_options + list(GROWTH_MAP.keys()), key='q6_select')
-    all_inputs_text.append(q6_selection)
+    # ⭐ Q5도 st.radio로 통일
+    st.markdown("Q5. 반려동물/아이 안전")
+    q5_selection = st.radio(" ", options=list(PET_MAP.keys()), index=None, key='q5_radio')
+    all_inputs_text.append(q5_selection if q5_selection else '-- 선택 --')
+    
+    # ⭐ Q6도 st.radio로 통일
+    st.markdown("Q6. 생장 속도")
+    q6_selection = st.radio(" ", options=list(GROWTH_MAP.keys()), index=None, key='q6_radio')
+    all_inputs_text.append(q6_selection if q6_selection else '-- 선택 --')
     
 st.markdown("---")
 
@@ -132,13 +139,16 @@ st.markdown("---")
 # ====================================================
 
 # 모든 질문이 선택되었는지 확인
-all_selected = all(val != '-- 선택 --' for val in all_inputs_text)
+all_selected = all(val != '-- 선택 --' and val != None for val in all_inputs_text) # None 체크 추가
 
 if PLANT_DATA and all_selected:
     
     # 4-1. 긴 문장 선택지를 짧은 코드로 변환 (매핑)
     filtered_values = []
     for i, selected_text in enumerate(all_inputs_text):
+        # ALL_MAPS[i].get(selected_text)는 None을 반환할 수 있으므로, None 대신 '-- 선택 --'이 오도록 처리합니다.
+        # 이 경우, None이 매핑되어 오는 것을 방지하기 위해 if/else문 대신 dict.get()을 사용합니다.
+        # (단, st.radio는 '선택' 옵션이 없어 None이 반환될 수 있으므로, 이미 상단에서 처리됨)
         filtered_values.append(ALL_MAPS[i].get(selected_text))
 
     # ⭐ 핵심 로직: 부분 일치 점수를 저장할 리스트를 만듭니다.
@@ -152,6 +162,7 @@ if PLANT_DATA and all_selected:
             if plant.get(key) == filtered_values[i]:
                 match_count += 1 
         
+        # 1개 이상 조건이 일치하면 리스트에 추가합니다.
         if match_count > 0:
             scored_plants.append((match_count, plant))
 
@@ -171,26 +182,26 @@ if PLANT_DATA and all_selected:
             col_img, col_text = st.columns([1, 3])
             
             with col_img:
-                # ⭐⭐ 이미지 출력 추가 ⭐⭐
+                # ⭐⭐ 이미지 출력 부분 ⭐⭐
                 image_file_name = plant.get('image_file') 
                 if image_file_name:
                     image_path = "{0}/{1}".format(IMAGE_DIR, image_file_name)
                     try:
-                        st.image(image_path, caption=plant['korean_name'])
+                        st.image(image_path, caption=plant['korean_name'], width=150)
                     except FileNotFoundError:
                         st.warning("이미지 파일 {0} 없음".format(image_file_name))
                 else:
                     st.warning("이미지 경로 누락")
             
             with col_text:
-                # .format() 사용 (점수 출력)
+                # 텍스트 정보 출력
                 st.subheader("{0}. {1} (✅ {2}/6 조건 일치)".format(i + 1, plant['korean_name'], score))
                 st.info("🌿 난이도: {0} | ☀️ 빛: {1} | 📏 크기: {2}".format(
                     plant['difficulty'], plant['light_level'], plant['size']))
                 st.info("💨 공기정화: {0} | 🐶 안전성: {1} | 📈 생장 속도: {2}".format(
                     plant['air_purifying'], plant['pet_safe'], plant['growth_speed']))
             
-            # 5-2. 팁은 전체 너비로 출력
+            # 팁은 전체 너비로 출력
             st.warning("💡 일반 관리 팁: {0}".format(plant.get('management_tip', '팁 정보 없음')))
             st.error("⚠️ 잎 변색 시 대처법: {0}".format(plant.get('discoloration_tip', '대처 팁 정보 없음'))) 
             st.markdown("---")
