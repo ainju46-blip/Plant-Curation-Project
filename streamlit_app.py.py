@@ -1,7 +1,9 @@
 import streamlit as st
 import json
 
-# 1. 매핑 딕셔너리 정의 (문장 <-> 코드 값 변환)
+# ====================================================
+# 1. 매핑 딕셔너리 정의 (코드 <-> 문장 변환용)
+# ====================================================
 
 DIFFICULTY_MAP = {
     '매우 귀찮음 (물 주기를 자주 잊어요) 😴': '하',
@@ -43,23 +45,28 @@ ALL_MAPS = [DIFFICULTY_MAP, LIGHT_MAP, SIZE_MAP, AIR_MAP, PET_MAP, GROWTH_MAP]
 JSON_KEYS = ['difficulty', 'light_level', 'size', 'air_purifying', 'pet_safe', 'growth_speed'] 
 NUM_CONDITIONS = len(JSON_KEYS)
 
+# ====================================================
 # 2. 데이터 로드 및 UI 설정
+# ====================================================
+
 @st.cache_data
 def load_data(file_path):
     """JSON 파일을 로드하고 파일 없을 시 에러 메시지를 출력합니다."""
     try:
+        # 파일 이름을 소문자로 강제하여 대소문자 오류를 방지합니다.
         with open(file_path, 'r', encoding='utf-8') as f:
             data = json.load(f)
         return data
     except FileNotFoundError:
-        st.error("오류: {0} 파일을 찾을 수 없습니다. JSON 파일을 확인해주세요.".format(file_path))
+        # FileNotFoundError 처리 시, 파일 경로를 변수로 받아 출력합니다.
+        st.error("오류: {0} 파일을 찾을 수 없습니다. JSON 파일 이름(plants_data.json)을 확인해주세요.".format(file_path))
         return []
 
-PLANT_DATA = load_data('plants_data.json')
+PLANT_DATA = load_data('plants_data.json') # 파일 이름은 소문자로 지정합니다.
 
 st.title("🌿 성향 맞춤 실내 식물 큐레이션")
 st.markdown("당신의 관리 성향, 환경, 목적에 가장 적합한 식물을 찾아드립니다.")
-st.markdown("---")
+st.markdown("---") # UI 디자인 구분선
 
 default_options = ['-- 선택 --']
 all_inputs = []
@@ -83,22 +90,24 @@ with col3:
     all_inputs.append(st.selectbox("Q6. 생장 속도", default_options + list(GROWTH_MAP.keys())))   
 
 
-# 4. 6가지 조건 필터링 로직 및 결과 출력
-
+# ====================================================
+# 3. 6가지 조건 필터링 로직 및 결과 출력
+# ====================================================
 
 # 모든 질문이 선택되었는지 확인
 all_selected = all(val != '-- 선택 --' for val in all_inputs)
 
 if PLANT_DATA and all_selected:
     
-    # 4-1. 긴 문장 선택지를 짧은 코드로 변환 (매핑)
+    # 3-1. 긴 문장 선택지를 짧은 코드로 변환 (매핑)
     filtered_values = []
     for i, selected_text in enumerate(all_inputs):
+        # ALL_MAPS[i].get(selected_text)를 사용하여 짧은 코드를 추출합니다.
         filtered_values.append(ALL_MAPS[i].get(selected_text))
 
     recommended_plants = []
 
-    # 4-2. 6가지 조건 필터링 실행
+    # 3-2. 6가지 조건 필터링 실행
     for plant in PLANT_DATA:
         match_count = 0
         
@@ -114,7 +123,7 @@ if PLANT_DATA and all_selected:
     # ⭐ 추천 식물을 최대 3개로 제한합니다.
     final_recommendations = recommended_plants[:3] 
     
-    # 4-3. 결과 출력
+    # 3-3. 결과 출력
     st.header("✅ 추천 결과")
     
     if len(final_recommendations) > 0:
