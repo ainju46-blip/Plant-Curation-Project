@@ -26,7 +26,7 @@
   {
     "id": 3,
     "korean_name": "금전수",
-    "difficulty": "하",
+    "difficulty": "중",
     "light_level": "낮음",
     "size": "중",
     "management_tip": "어두운 곳에서도 잘 자라며, 물을 자주 주면 안 됩니다.",
@@ -62,7 +62,7 @@
   {
     "id": 6,
     "korean_name": "테이블 야자",
-    "difficulty": "하",
+    "difficulty": "중",
     "light_level": "중간",
     "size": "중",
     "management_tip": "작고 튼튼하며, 밝은 간접광을 좋아합니다.",
@@ -74,7 +74,7 @@
   {
     "id": 7,
     "korean_name": "아이비",
-    "difficulty": "하",
+    "difficulty": "중",
     "light_level": "중간",
     "size": "소",
     "management_tip": "덩굴성 식물로, 실내 어디든 잘 적응합니다.",
@@ -465,7 +465,7 @@
     "air_purifying": "낮음",
     "pet_safe": "안전",
     "growth_speed": "느림",
-    "discoloration_tip": "줄기가 검게 변하면 통풍이 잘 안 되어 썩는 것입니다. 환기 공간에 걸어두세요."
+    "discoloration_tip": "잎이 검게 변하면 통풍이 잘 안 되어 썩는 것입니다. 환기 공간에 걸어두세요."
   },
   {
     "id": 40,
